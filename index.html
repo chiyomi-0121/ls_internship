@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>脳に汗をかくプログラム体験</title>
+</head>
+<body>
+    <!--div id="level-1">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div-->
+    <div id="level-2">
+        <p v-if="nodata">ロージーのお仕事がありません</p>
+        <input v-model="message">
+        <button v-on:click="addMessage">追加</button>
+        <ul>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+                <button v-on:click="delMessage">削除</button>
+            </li>
+        </ul>
+        <!--p v-if="show">{{ text }}<button v-on:click="delMessage">削除</button></p-->
+        <p>todoの数 {{ todos.length }}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
